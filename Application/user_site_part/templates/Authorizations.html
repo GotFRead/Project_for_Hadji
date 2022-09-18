@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Авторизация</title>
+        <link rel="stylesheet" href="../static/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="../static/css/site.css"/>
+    </head>
+    <body>
+        <div class="container" align="center">
+            <div class="bodyAyth">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <h4>Авторизация</h4>
+                    <div class="form-group">
+                        <label class="control-label">Логин</label>
+                        <input type="text" class="form-control green-form" name="login"/>
+                        <span class="text-danger" id="login-validation"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Пароль</label>
+                        <input type="password" class="form-control green-form" name="password"/>
+                        <span class="text-danger" id="password-validation"></span>
+                    </div>
+                    <div class="form-group-btn">
+                        <div class="btn-group-enter"><input type="submit" value="Войти" class="btn green-btn"></div>
+                        <div class="btn-group-register"><a href="{% url 'registration' %}" class="btn green-btn">Регистрация</a></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

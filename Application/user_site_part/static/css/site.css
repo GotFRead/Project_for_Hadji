@@ -1,0 +1,66 @@
+html{
+    width: 100%;
+}
+body {
+    width: 100%;
+}
+.green-form {
+    border-color: #1D766F;
+}
+.green-form:focus {
+    box-shadow:0 0 0 .25rem #5DCEC6
+}
+.container {
+    align-self: center;
+    margin-top: 10%;
+}
+.green-btn {
+    margin-top: 15px;
+    border-color: #1D766F;
+    background-color: #00665E;
+    color: #fff;
+}
+.green-btn:focus {
+    box-shadow:0 0 0 .25rem #5DCEC6;
+    border-color: #1D766F;
+}
+.control-label {
+    text-align: left;
+    align-items: left;
+}
+.bodyAyth {
+    width: 35%;
+    min-width: 450px;
+    border: solid;
+    background-color: #FFB073;
+    border-radius: 40px;
+    padding: 60px;
+    text-align: left;
+}
+.form-group{
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.form-group-btn{
+    display: flex;
+}
+h4{
+    text-align: center;
+}
+.btn-group-enter {
+    width: 40%;
+    text-align: center;
+}
+.btn-group-register {
+    width: 60%;
+    text-align: center;
+}
+.form-group-reg {
+    margin-top: 15px;
+    text-align: center;
+}
+.card-img-top{
+    width: 100%;
+}
+

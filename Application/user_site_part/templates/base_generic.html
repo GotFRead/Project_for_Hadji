@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Массажный салон</title>
+    <link rel="stylesheet" href="../static/css/main.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a href="{% url 'main_form_user' %}" class="nav-link">Главная</a>
+            </li>
+        </ul>
+        <div class="cls" align="right">
+        {% if request.user.is_authenticated %}
+        <a href="#" class="btn btn-outline-light">Выход</a>
+        {% else %}
+        <a href="#" class="btn btn-outline-light mr-2">Вход</a>
+        <a href="#" class="btn btn-outline-light mr-2">Регистрация</a>
+        {% endif %}
+        </div>
+    </div>
+</nav>
+
+
+{% block content%}
+{% endblock %}
+
+<footer>
+    <h2>Все права защищены</h2>
+</footer>
+
+</body>
+</html>

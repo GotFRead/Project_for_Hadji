@@ -1,0 +1,27 @@
+.card-img-top{
+    height = 100px;
+    weight = 80px;
+}
+
+.btn btn-outline-light{
+    margin-right: 0;
+    width: 100%;
+}
+
+
+.btn btn-outline-light mr-2{
+    margin-right: 0;
+    width: 100%;
+}
+
+.cls{
+    margin-right: 0;
+    width: 100%;
+    text-align: right;
+}
+
+
+.nav-link{
+    margin-right: auto;
+}
+

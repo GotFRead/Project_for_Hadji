@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Регистрация</title>
+        <link rel="stylesheet" href="../static/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="../static/css/site.css"/>
+    </head>
+    <body>
+        <div class="container" align="center">
+            <div class="bodyAyth">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <h4>Регистрация</h4>
+                    <div class="form-group">
+                        <label class="control-label">Фамилия</label>
+                        <input name='last_name' type="text" class="form-control green-form" placeholder="Введите фамилию"/>
+                        <span class="text-danger" id="first_name-validation"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label">Имя</label>
+                        <input name='name' type="text" class="form-control green-form" placeholder="Введите имя"/>
+                        <span class="text-danger" id="last_name-validation"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label">Отчество</label>
+                        <input name='last_last_name' type="text" class="form-control green-form" placeholder="Введите отчество"/>
+                        <span class="text-danger" id="last_last_name-validation"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label">Телефон</label>
+                        <input name='number' type="text" class="form-control green-form"placeholder="Введите телефон" />
+                        <span class="text-danger" id="number-validation"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label">Адрес</label>
+                        <input name='address' type="text" class="form-control green-form" placeholder="Введите адрес" />
+                        <span class="text-danger" id="address-validation"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label">Логин</label>
+                        <input name='login' type="text" class="form-control green-form" placeholder="Введите логин"/>
+                        <span class="text-danger" id="login-validation"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Пароль</label>
+                        <input name='repeat_password' type="password" class="form-control green-form" placeholder="Введите пароль"/>
+                        <span class="text-danger" id="password-validation"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Повторите пароль</label>
+                        <input name='password' type="password" class="form-control green-form" placeholder="Повторите пароль"/>
+                        <span class="text-danger" id="repassword-validation"></span>
+                    </div>
+                    <div class="form-group-reg">
+                        <div class="btn-group"><input type="submit" value="Регистрация" class="btn green-btn" /></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

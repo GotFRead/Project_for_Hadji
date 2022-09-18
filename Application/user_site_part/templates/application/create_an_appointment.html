@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Запись на прием</title>
+    <link rel="stylesheet" href="../../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../static/css/main.css">
+    <link rel="stylesheet" href="../../static/css/site.css">
+     <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- XDSoft DateTimePicker -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css" integrity="sha256-DOS9W6NR+NFe1fUhEE0PGKY/fubbUCnOfTje2JMDw3Y=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js" integrity="sha256-FEqEelWI3WouFOo2VWP/uJfs1y8KJ++FLh2Lbqc8SJk=" crossorigin="anonymous"></script>
+
+    {% extends 'base_generic.html' %}
+
+</head>
+<body>
+{% block content %}
+
+<form action="" method="POST">
+    <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+            <h2>Врач: {{ staff.last_name }} {{staff.first_name}} {{ staff.last_last_name }}</h2>
+            <p> Специализация : {{ staff.specialization }} </p>
+            <p> {{ bio.bio }} </p>
+            </div>
+
+            <div class="card-body">
+                <h4 class="card-title">{{ service.type_service }}</h4>
+                <p class="card-text">{{ service.short_service_description }} </p>
+                <div class="d-flex justify-content-between align-items-center">
+                </div>
+            </div>
+            <input id="datetimepicker" type="text" placeholder="Выберите дату" name="Date_and_time">
+        </div>
+    </div>
+    <div class="btn-group-register"><a href="{% url 'registration' %}" class="btn green-btn">Записаться</a></div>
+</form>
+
+
+  <script>
+    $(function () {
+      $("#datetimepicker").datetimepicker();
+    });
+  </script>
+
+{% endblock %}
+
+</body>
+</html>
